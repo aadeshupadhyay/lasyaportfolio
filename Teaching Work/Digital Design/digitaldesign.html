@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Digital Imaging - Teaching Work</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      font-family: 'Inter', sans-serif !important;
+    }
+  </style>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#ffffff",
+            "on-surface": "#1b1c1c",
+            "body-muted": "#2c3142",
+            "title-accent": "#0738a5",
+          },
+          fontFamily: {
+            serif: ["Inter", "sans-serif", "Georgia", "serif"],
+            sans: ["Inter", "sans-serif", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-background text-on-surface antialiased">
+  <a class="fixed left-6 top-6 z-50 flex items-center justify-center w-10 h-10 bg-white/95 rounded-full border border-neutral-200/80 shadow-sm text-neutral-800 hover:text-[#0738a5] hover:bg-white hover:shadow-md transition-all duration-300 group"
+    href="../teaching-work.html" aria-label="Back to Teaching Work">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
+      class="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-0.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+  </a>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/80 p-4"
+    role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button id="lightbox-close" type="button"
+      class="absolute right-4 top-[max(1rem,env(safe-area-inset-top))] z-[110] flex h-11 w-11 items-center justify-center rounded-full bg-white text-on-surface shadow-md outline-none ring-1 ring-black/10 transition-colors hover:bg-neutral-100 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/50 sm:right-6 sm:top-[max(1.25rem,env(safe-area-inset-top))]"
+      aria-label="Close image">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img id="lightbox-img"
+      class="max-h-[calc(100dvh-2rem)] max-w-full rounded object-contain shadow-2xl ring-1 ring-white/10" src=""
+      alt="" />
+  </div>
+
+  <main class="mx-auto w-full max-w-6xl px-4 pb-20 pt-28 sm:px-6 md:px-10 md:pb-28 md:pt-36">
+    <h1
+      class="text-center font-serif text-3xl font-medium tracking-tight text-title-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
+      Digital Imaging
+    </h1>
+
+    <p
+      class="mx-auto mt-8 max-w-2xl text-center font-sans text-[15px] font-normal leading-[1.75] text-body-muted md:text-[16px] md:leading-[1.7]">
+      Student portfolio works, digital compositions, and exercises exploring digital imaging techniques.
+    </p>
+
+    <div class="mx-auto mt-12 grid max-w-5xl grid-cols-1 items-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-5">
+      <!-- CAMPBELLhallee_DSN1010101_FinalProject-Step3-Spr26.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/CAMPBELLhallee_DSN1010101_FinalProject-Step3-Spr26.png" data-alt="Digital Imaging - Image 1"
+        aria-label="View full size: Digital Imaging - Image 1">
+        <img class="h-full w-full object-contain" src="Digital/CAMPBELLhallee_DSN1010101_FinalProject-Step3-Spr26.png" alt="Digital Imaging - Image 1"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.28.51 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.28.51 PM.png" data-alt="Digital Imaging - Image 2"
+        aria-label="View full size: Digital Imaging - Image 2">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.28.51 PM.png" alt="Digital Imaging - Image 2"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.29.08 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.29.08 PM.png" data-alt="Digital Imaging - Image 3"
+        aria-label="View full size: Digital Imaging - Image 3">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.29.08 PM.png" alt="Digital Imaging - Image 3"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.29.44 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.29.44 PM.png" data-alt="Digital Imaging - Image 4"
+        aria-label="View full size: Digital Imaging - Image 4">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.29.44 PM.png" alt="Digital Imaging - Image 4"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.29.56 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.29.56 PM.png" data-alt="Digital Imaging - Image 5"
+        aria-label="View full size: Digital Imaging - Image 5">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.29.56 PM.png" alt="Digital Imaging - Image 5"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.30.15 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.30.15 PM.png" data-alt="Digital Imaging - Image 6"
+        aria-label="View full size: Digital Imaging - Image 6">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.30.15 PM.png" alt="Digital Imaging - Image 6"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.30.26 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.30.26 PM.png" data-alt="Digital Imaging - Image 7"
+        aria-label="View full size: Digital Imaging - Image 7">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.30.26 PM.png" alt="Digital Imaging - Image 7"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.30.45 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.30.45 PM.png" data-alt="Digital Imaging - Image 8"
+        aria-label="View full size: Digital Imaging - Image 8">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.30.45 PM.png" alt="Digital Imaging - Image 8"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.31.08 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.31.08 PM.png" data-alt="Digital Imaging - Image 9"
+        aria-label="View full size: Digital Imaging - Image 9">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.31.08 PM.png" alt="Digital Imaging - Image 9"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.31.26 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.31.26 PM.png" data-alt="Digital Imaging - Image 10"
+        aria-label="View full size: Digital Imaging - Image 10">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.31.26 PM.png" alt="Digital Imaging - Image 10"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.31.40 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.31.40 PM.png" data-alt="Digital Imaging - Image 11"
+        aria-label="View full size: Digital Imaging - Image 11">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.31.40 PM.png" alt="Digital Imaging - Image 11"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.31.53 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.31.53 PM.png" data-alt="Digital Imaging - Image 12"
+        aria-label="View full size: Digital Imaging - Image 12">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.31.53 PM.png" alt="Digital Imaging - Image 12"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.32.10 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.32.10 PM.png" data-alt="Digital Imaging - Image 13"
+        aria-label="View full size: Digital Imaging - Image 13">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.32.10 PM.png" alt="Digital Imaging - Image 13"
+          loading="lazy" decoding="async" />
+      </button>
+      <!-- Screenshot 2026-06-02 at 7.32.26 PM.png -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="Digital/Screenshot 2026-06-02 at 7.32.26 PM.png" data-alt="Digital Imaging - Image 14"
+        aria-label="View full size: Digital Imaging - Image 14">
+        <img class="h-full w-full object-contain" src="Digital/Screenshot 2026-06-02 at 7.32.26 PM.png" alt="Digital Imaging - Image 14"
+          loading="lazy" decoding="async" />
+      </button>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImg = document.getElementById("lightbox-img");
+      var closeBtn = document.getElementById("lightbox-close");
+
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.remove("hidden");
+        lightbox.classList.add("flex");
+        document.body.style.overflow = "hidden";
+        closeBtn.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+        lightboxImg.src = "";
+        lightboxImg.alt = "";
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".lightbox-trigger").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          openLightbox(btn.dataset.src, btn.dataset.alt);
+        });
+      });
+
+      closeBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        closeLightbox();
+      });
+
+      lightbox.addEventListener("click", function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeLightbox();
+      });
+    })();
+  </script>
+</body>
+
+</html>

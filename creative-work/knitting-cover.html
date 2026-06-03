@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Knit Wear - Combining Modularity with Knitwear - Creative Work</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      font-family: 'Inter', sans-serif !important;
+    }
+  </style>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#ffffff",
+            "on-surface": "#1b1c1c",
+            "title-accent": "#0738a5",
+          },
+          fontFamily: {
+            serif: ["Inter", "sans-serif", "Georgia", "serif"],
+            sans: ["Inter", "sans-serif", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-background text-on-surface antialiased">
+  <a class="fixed left-6 top-6 z-50 flex items-center justify-center w-10 h-10 bg-white/95 rounded-full border border-neutral-200/80 shadow-sm text-neutral-800 hover:text-[#0738a5] hover:bg-white hover:shadow-md transition-all duration-300 group"
+    href="../creative-work.html" aria-label="Back to Creative Work">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
+      class="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-0.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+  </a>
+
+  <main class="mx-auto w-full max-w-6xl px-6 pb-16 pt-28 md:px-8 md:pb-24 md:pt-32">
+    <h1
+      class="text-center font-serif text-3xl font-medium tracking-tight text-title-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
+      Knit Wear - Combining Modularity with Knitwear
+    </h1>
+
+
+
+    <div class="mt-14 space-y-6">
+      <p class="text-left font-sans text-[13px] leading-snug text-on-surface/50">Click an image to view larger.</p>
+
+      <!-- Grid layout for the images -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="overflow-hidden bg-neutral-100 rounded-lg">
+          <img
+            class="js-lightbox-trigger h-[340px] w-full cursor-pointer object-cover transition-opacity hover:opacity-95"
+            src="../images/Knitting Cover/2.jpeg" alt="Knitting Cover design 1" role="button" tabindex="0"
+            aria-label="Open image larger" />
+        </div>
+        <div class="overflow-hidden bg-neutral-100 rounded-lg">
+          <img
+            class="js-lightbox-trigger h-[340px] w-full cursor-pointer object-cover transition-opacity hover:opacity-95"
+            src="../images/Knitting Cover/1.jpg" alt="Knitting Cover design 2" role="button" tabindex="0"
+            aria-label="Open image larger" />
+        </div>
+        <div class="overflow-hidden bg-neutral-100 rounded-lg">
+          <img
+            class="js-lightbox-trigger h-[340px] w-full cursor-pointer object-cover transition-opacity hover:opacity-95"
+            src="../images/Knitting Cover/3.jpeg" alt="Knitting Cover design 3" role="button" tabindex="0"
+            aria-label="Open image larger" />
+        </div>
+        <div class="overflow-hidden bg-neutral-100 rounded-lg">
+          <img
+            class="js-lightbox-trigger h-[340px] w-full cursor-pointer object-cover transition-opacity hover:opacity-95"
+            src="../images/Knitting Cover/6.jpeg" alt="Knitting Cover design 4" role="button" tabindex="0"
+            aria-label="Open image larger" />
+        </div>
+        <div class="overflow-hidden bg-neutral-100 rounded-lg">
+          <img
+            class="js-lightbox-trigger h-[340px] w-full cursor-pointer object-cover transition-opacity hover:opacity-95"
+            src="../images/Knitting Cover/4.jpeg" alt="Knitting Cover design 5" role="button" tabindex="0"
+            aria-label="Open image larger" />
+        </div>
+        <div class="overflow-hidden bg-neutral-100 rounded-lg">
+          <img
+            class="js-lightbox-trigger h-[340px] w-full cursor-pointer object-cover transition-opacity hover:opacity-95"
+            src="../images/Knitting Cover/7.jpeg" alt="Knitting Cover design 6" role="button" tabindex="0"
+            aria-label="Open image larger" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="image-lightbox" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true"
+    aria-labelledby="lightbox-title">
+    <button type="button" id="lightbox-backdrop" class="absolute inset-0 bg-black/80"
+      aria-label="Close viewer"></button>
+
+    <div
+      class="pointer-events-none absolute left-0 right-0 top-0 z-10 flex flex-wrap items-center justify-center gap-2 px-3 py-3 md:justify-end md:px-6">
+      <div
+        class="pointer-events-auto flex flex-wrap items-center justify-center gap-2 rounded-lg bg-on-surface/90 px-2 py-2 shadow-lg backdrop-blur-sm">
+        <button type="button" id="lightbox-close"
+          class="font-sans text-sm font-medium text-white hover:text-white px-3 py-1">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div class="absolute inset-0 overflow-auto px-4 pb-24 pt-20 md:px-8 md:pb-28 md:pt-24">
+      <div class="flex min-h-full min-w-full justify-center">
+        <img id="lightbox-image" src="" alt="" class="h-auto w-auto max-w-none bg-neutral-900/20"
+          style="max-width: min(92vw, 1200px)" />
+      </div>
+    </div>
+    <span id="lightbox-title" class="sr-only">Image viewer</span>
+  </div>
+
+  <script>
+    (function () {
+      var lightbox = document.getElementById("image-lightbox");
+      var backdrop = document.getElementById("lightbox-backdrop");
+      var imgEl = document.getElementById("lightbox-image");
+      var btnClose = document.getElementById("lightbox-close");
+      var triggers = document.querySelectorAll(".js-lightbox-trigger");
+
+      function openLightbox(src, alt) {
+        imgEl.src = src;
+        imgEl.alt = alt || "";
+        lightbox.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+        btnClose.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+        imgEl.removeAttribute("src");
+      }
+
+      triggers.forEach(function (el) {
+        el.addEventListener("click", function () {
+          openLightbox(el.currentSrc || el.src, el.alt);
+        });
+        el.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openLightbox(el.currentSrc || el.src, el.alt);
+          }
+        });
+      });
+
+      btnClose.addEventListener("click", function (e) {
+        e.stopPropagation();
+        closeLightbox();
+      });
+      backdrop.addEventListener("click", closeLightbox);
+
+      document.addEventListener("keydown", function (e) {
+        if (lightbox.classList.contains("hidden")) return;
+        if (e.key === "Escape") closeLightbox();
+      });
+    })();
+  </script>
+</body>
+
+</html>

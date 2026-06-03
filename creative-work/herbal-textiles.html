@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Herbal Textiles - Creative Work</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet" />
+    <style>
+    * {
+      font-family: 'Inter', sans-serif !important;
+    }
+  </style>
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#ffffff",
+              "on-surface": "#1b1c1c",
+              "body-muted": "#2c3142",
+            },
+            fontFamily: {
+              serif: ["Inter", "sans-serif", "Georgia", "serif"],
+              sans: ["Inter", "sans-serif", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-background text-on-surface antialiased">
+    <a
+      class="fixed left-6 top-6 z-50 flex items-center justify-center w-10 h-10 bg-white/95 rounded-full border border-neutral-200/80 shadow-sm text-neutral-800 hover:text-[#0738a5] hover:bg-white hover:shadow-md transition-all duration-300 group"
+      href="../creative-work.html"
+      aria-label="Back to Creative Work"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-0.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </a>
+        <figcaption class="mx-auto mt-4 max-w-[min(100%,72rem)] text-center font-serif text-sm font-normal tracking-normal text-neutral-500 md:text-[15px]">
+          A Guide To Natural Colors
+        </figcaption>
+      </figure>
+
+      <p
+        class="mx-auto mt-10 max-w-3xl text-left font-sans text-[15px] font-normal leading-[1.75] text-body-muted md:text-[16px] md:leading-[1.7]"
+      >
+        This scarf is crafted from dyed cotton yarns, naturally dyed using plant-based ingredients, creating a sustainable and Eco-friendly piece. The yarn
+        is sourced from &ldquo;Organic Textiles org&rdquo;. The earthy color palette, achieved through herbal dyeing techniques. The soft, breathable
+        cotton provides comfort and durability, while the intricate knit pattern adds depth and texture to the design. Infused with the calming, organic
+        properties of natural dyes, this garment offers a unique connection between fashion and wellness. It&rsquo;s a reflection of my commitment to
+        creating mindful, sustainable designs that honor both the wearer and the environment.
+      </p>
+
+      <div class="mx-auto mt-12 grid max-w-5xl grid-cols-1 items-start gap-4 sm:grid-cols-2 sm:gap-5">
+        <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
+          <img
+            class="block h-full w-full object-contain"
+            src="../images/herbaltextiles/Yarns%201.jpg"
+            alt="Naturally dyed cotton yarns — detail 1"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
+          <img
+            class="block h-full w-full object-contain"
+            src="../images/herbaltextiles/Yarns%202.jpg"
+            alt="Naturally dyed cotton yarns — detail 2"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
