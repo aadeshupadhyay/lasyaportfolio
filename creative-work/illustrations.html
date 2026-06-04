@@ -62,7 +62,7 @@
             aria-label="Open enlarged Black Swan board 1"
           >
             <img
-              class="pointer-events-none block h-auto w-full cursor-zoom-in object-contain bg-neutral-50"
+              class="pointer-events-none block h-auto w-full cursor-pointer object-contain bg-neutral-50"
               src="../images/Fashion%20Illustrations/Black%20swan%201.jpg"
               alt="Fashion illustration presentation board — Black Swan collection 1"
               loading="lazy"
@@ -80,7 +80,7 @@
             aria-label="Open enlarged Black Swan board 2"
           >
             <img
-              class="pointer-events-none block h-auto w-full cursor-zoom-in object-contain bg-neutral-50"
+              class="pointer-events-none block h-auto w-full cursor-pointer object-contain bg-neutral-50"
               src="../images/Fashion%20Illustrations/Black%20swan%202.jpg"
               alt="Fashion illustration presentation board — Black Swan collection 2"
               loading="lazy"
@@ -98,7 +98,7 @@
             aria-label="Open enlarged Hana board"
           >
             <img
-              class="pointer-events-none block h-auto w-full cursor-zoom-in object-contain bg-neutral-50"
+              class="pointer-events-none block h-auto w-full cursor-pointer object-contain bg-neutral-50"
               src="../images/Fashion%20Illustrations/Hana%201.jpg"
               alt="Fashion illustration presentation board — Hana"
               loading="lazy"
@@ -109,65 +109,15 @@
       </div>
     </main>
 
-    <div
-      id="image-lightbox"
-      class="fixed inset-0 z-[200] hidden h-[100dvh] w-full flex-col overflow-hidden"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Enlarged image"
-    >
-      <button
-        id="image-lightbox-backdrop"
-        type="button"
-        class="absolute inset-0 z-[200] bg-black/85 backdrop-blur-[2px]"
-        tabindex="-1"
-        aria-label="Close image"
-      ></button>
-
-      <div
-        class="relative z-[205] flex shrink-0 flex-wrap items-center justify-end gap-2 px-3 pb-2 pt-[max(0.75rem,env(safe-area-inset-top))] sm:gap-3 sm:px-4 sm:pb-3 sm:pt-[max(1rem,env(safe-area-inset-top))]"
-      >
-        <button
-          id="image-lightbox-zoom-out"
-          type="button"
-          class="rounded-md bg-white/95 px-3 py-2 font-sans text-sm font-semibold text-on-surface shadow-md outline-none ring-1 ring-black/10 transition-colors hover:bg-neutral-100 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/60 sm:px-4 sm:text-base"
-          aria-label="Zoom out"
-        >
-          Zoom out
-        </button>
-        <button
-          id="image-lightbox-zoom-in"
-          type="button"
-          class="rounded-md bg-white/95 px-3 py-2 font-sans text-sm font-semibold text-on-surface shadow-md outline-none ring-1 ring-black/10 transition-colors hover:bg-neutral-100 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/60 sm:px-4 sm:text-base"
-          aria-label="Zoom in"
-        >
-          Zoom in
-        </button>
-        <button
-          id="image-lightbox-close"
-          type="button"
-          class="rounded-md bg-white px-4 py-2 font-sans text-sm font-semibold text-on-surface shadow-md outline-none ring-1 ring-black/10 transition-colors hover:bg-neutral-100 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/60 sm:text-base"
-        >
-          Close
-        </button>
-      </div>
-
-      <div
-        id="image-lightbox-stage"
-        class="relative z-[203] flex min-h-0 flex-1 items-center justify-center overflow-auto overscroll-contain pointer-events-none"
-      >
-        <div
-          id="image-lightbox-zoom-wrap"
-          class="pointer-events-auto origin-center p-1 transition-transform duration-200 ease-out will-change-transform sm:p-2"
-          style="transform: scale(1)"
-        >
-          <img
-            id="image-lightbox-img"
-            class="block max-h-[calc(100dvh-5.5rem)] max-w-[min(100vw,100%)] rounded-sm object-contain shadow-2xl ring-1 ring-white/15 select-none"
-            alt=""
-            draggable="false"
-          />
-        </div>
+    <!-- Lightbox Modal -->
+    <div id="image-lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center backdrop-blur-sm select-none">
+      <button id="lightbox-close" class="absolute right-6 top-6 text-white hover:text-neutral-300 transition-colors focus:outline-none" aria-label="Close lightbox">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="max-w-[90vw] max-h-[90vh] flex items-center justify-center">
+        <img id="image-lightbox-img" class="max-w-full max-h-[90vh] object-contain shadow-2xl" src="" alt="Enlarged view" />
       </div>
     </div>
 
@@ -175,45 +125,21 @@
       (function () {
         var root = document.getElementById("image-lightbox");
         var img = document.getElementById("image-lightbox-img");
-        var zoomWrap = document.getElementById("image-lightbox-zoom-wrap");
-        var closeBtn = document.getElementById("image-lightbox-close");
-        var zoomInBtn = document.getElementById("image-lightbox-zoom-in");
-        var zoomOutBtn = document.getElementById("image-lightbox-zoom-out");
-        var backdrop = document.getElementById("image-lightbox-backdrop");
-        var stage = document.getElementById("image-lightbox-stage");
+        var closeBtn = document.getElementById("lightbox-close");
         var triggers = document.querySelectorAll(".lightbox-trigger");
         var lastFocus = null;
-        var scale = 1;
-        var MIN_SCALE = 1;
-        var MAX_SCALE = 4;
-        var STEP = 0.25;
-
-        function applyScale() {
-          zoomWrap.style.transform = "scale(" + scale + ")";
-          zoomOutBtn.disabled = scale <= MIN_SCALE;
-          zoomInBtn.disabled = scale >= MAX_SCALE;
-        }
 
         function open(src, alt) {
           lastFocus = document.activeElement;
-          scale = 1;
-          applyScale();
           img.src = src;
           img.alt = alt || "";
           root.classList.remove("hidden");
-          root.classList.add("flex");
           document.body.style.overflow = "hidden";
-          stage.scrollTop = 0;
-          stage.scrollLeft = 0;
-          closeBtn.focus();
         }
 
         function close() {
           root.classList.add("hidden");
-          root.classList.remove("flex");
           document.body.style.overflow = "";
-          scale = 1;
-          applyScale();
           img.removeAttribute("src");
           img.alt = "";
           if (lastFocus && typeof lastFocus.focus === "function") {
@@ -229,31 +155,21 @@
           });
         });
 
-        zoomInBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          scale = Math.min(MAX_SCALE, scale + STEP);
-          applyScale();
-        });
-
-        zoomOutBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          scale = Math.max(MIN_SCALE, scale - STEP);
-          applyScale();
-        });
-
         closeBtn.addEventListener("click", function (e) {
           e.stopPropagation();
           close();
         });
 
-        backdrop.addEventListener("click", close);
+        root.addEventListener("click", function (e) {
+          if (e.target === root || e.target.id === "image-lightbox") {
+            close();
+          }
+        });
 
         document.addEventListener("keydown", function (e) {
           if (root.classList.contains("hidden")) return;
           if (e.key === "Escape") close();
         });
-
-        applyScale();
       })();
     </script>
   </body>
