@@ -1,170 +1,164 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Herbal Textiles - Creative Work</title>
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Herbal Textiles - Creative Work</title>
 
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet" />
-    <style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet" />
+  <style>
     * {
       font-family: 'Inter', sans-serif !important;
     }
   </style>
 
-    <script id="tailwind-config">
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: "#ffffff",
-              "on-surface": "#1b1c1c",
-              "body-muted": "#2c3142",
-            },
-            fontFamily: {
-              serif: ["Inter", "sans-serif", "Georgia", "serif"],
-              sans: ["Inter", "sans-serif", "system-ui", "sans-serif"],
-            },
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#ffffff",
+            "on-surface": "#1b1c1c",
+            "body-muted": "#2c3142",
+          },
+          fontFamily: {
+            serif: ["Inter", "sans-serif", "Georgia", "serif"],
+            sans: ["Inter", "sans-serif", "system-ui", "sans-serif"],
           },
         },
-      };
-    </script>
-  </head>
+      },
+    };
+  </script>
+</head>
 
-  <body class="bg-background text-on-surface antialiased">
-    <a
-      class="fixed left-6 top-6 z-50 flex items-center justify-center w-10 h-10 bg-white/95 rounded-full border border-neutral-200/80 shadow-sm text-neutral-800 hover:text-[#0738a5] hover:bg-white hover:shadow-md transition-all duration-300 group"
-      href="../creative-work.html"
-      aria-label="Back to Creative Work"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-0.5">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </a>
+<body class="bg-background text-on-surface antialiased">
+  <a class="fixed left-6 top-6 z-50 flex items-center justify-center w-10 h-10 bg-white/95 rounded-full border border-neutral-200/80 shadow-sm text-neutral-800 hover:text-[#0738a5] hover:bg-white hover:shadow-md transition-all duration-300 group"
+    href="../creative-work.html" aria-label="Back to Creative Work">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
+      class="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-0.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+  </a>
 
-    <main class="mx-auto max-w-5xl px-4 md:px-8 py-16 flex flex-col gap-10">
-      <!-- Title / Guide to Natural Colors (Bold, Black) -->
-      <div class="text-center">
-        <h1 class="text-black font-bold text-lg md:text-xl tracking-widest uppercase">
-          A Guide To Natural Colors
-        </h1>
-      </div>
+  <main class="mx-auto max-w-5xl px-4 md:px-8 py-16 flex flex-col gap-10">
+    <!-- Title / Guide to Natural Colors (Bold, Black) -->
+    <div class="text-center">
+      <h1 class="text-black font-bold text-lg md:text-xl tracking-widest uppercase">
+        A Guide To Natural Colors
+      </h1>
+    </div>
 
-      <!-- Top Hero: AyurVastram.jpeg in landscape fitting in broadly -->
-      <div class="w-full bg-neutral-100 overflow-hidden shadow-sm">
+    <!-- Top Hero: AyurVastram.jpeg in landscape fitting in broadly -->
+    <div class="w-full bg-neutral-100 overflow-hidden shadow-sm">
+      <img
+        class="lightbox-trigger block w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity duration-200"
+        src="../images/herbaltextiles/AyurVastram.jpeg" alt="AyurVastram - Herbal Textiles Hero" loading="eager" />
+    </div>
+
+    <!-- Earthly Skin Title -->
+    <div class="text-center">
+      <h2 class="text-black font-bold text-base md:text-lg tracking-widest uppercase">
+        EARTHLY SKIN
+      </h2>
+    </div>
+
+    <!-- Scarf Description Text -->
+    <p
+      class="mx-auto max-w-3xl text-left font-sans text-[15px] font-normal leading-[1.75] text-black md:text-[16px] md:leading-[1.7]">
+      Earthly Skin is a scarf crafted from organic cotton yarn and naturally
+      dyed with plant-based ingredients. Its earthy tones are achieved through herbal dyeing techniques, while the
+      intricate knit structure adds texture and depth. Soft, breathable, and sustainable, the piece reflects a
+      commitment to mindful design, celebrating the connection between the body, nature, and responsible craftsmanship.
+    </p>
+
+    <!-- Scarf / Yarns Images -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
+      <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
         <img
-          class="lightbox-trigger block w-full h-auto object-cover max-h-[600px] cursor-pointer hover:opacity-95 transition-opacity duration-200"
-          src="../images/herbaltextiles/AyurVastram.jpeg"
-          alt="AyurVastram - Herbal Textiles Hero"
-          loading="eager"
-        />
+          class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
+          src="../images/herbaltextiles/Yarns%201.jpg" alt="Naturally dyed cotton yarns — detail 1" loading="lazy"
+          decoding="async" />
       </div>
-
-      <!-- Scarf Description Text -->
-      <p
-        class="mx-auto max-w-3xl text-left font-sans text-[15px] font-normal leading-[1.75] text-body-muted md:text-[16px] md:leading-[1.7]"
-      >
-        This scarf is crafted from dyed cotton yarns, naturally dyed using plant-based ingredients, creating a sustainable and Eco-friendly piece. The yarn
-        is sourced from &ldquo;Organic Textiles org&rdquo;. The earthy color palette, achieved through herbal dyeing techniques. The soft, breathable
-        cotton provides comfort and durability, while the intricate knit pattern adds depth and texture to the design. Infused with the calming, organic
-        properties of natural dyes, this garment offers a unique connection between fashion and wellness. It&rsquo;s a reflection of my commitment to
-        creating mindful, sustainable designs that honor both the wearer and the environment.
-      </p>
-
-      <!-- Scarf / Yarns Images -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
-        <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
-          <img
-            class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
-            src="../images/herbaltextiles/Yarns%201.jpg"
-            alt="Naturally dyed cotton yarns — detail 1"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
-          <img
-            class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
-            src="../images/herbaltextiles/Yarns%202.jpg"
-            alt="Naturally dyed cotton yarns — detail 2"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </div>
-
-      <!-- Exploration Images at the bottom -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 border-t border-neutral-100 pt-10">
-        <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
-          <img
-            class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
-            src="../images/herbaltextiles/Exploration%201.jpeg"
-            alt="Herbal Textiles Exploration 1"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
-          <img
-            class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
-            src="../images/herbaltextiles/Exploration%202.jpeg"
-            alt="Herbal Textiles Exploration 2"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </div>
-    </main>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center backdrop-blur-sm select-none">
-      <button id="lightbox-close" class="absolute right-6 top-6 text-white hover:text-neutral-300 transition-colors focus:outline-none" aria-label="Close lightbox">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <div class="max-w-[90vw] max-h-[90vh] flex items-center justify-center">
-        <img id="lightbox-img" class="max-w-full max-h-[90vh] object-contain shadow-2xl" src="" alt="Enlarged view" />
+      <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
+        <img
+          class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
+          src="../images/herbaltextiles/Yarns%202.jpg" alt="Naturally dyed cotton yarns — detail 2" loading="lazy"
+          decoding="async" />
       </div>
     </div>
 
-    <script>
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      const lightboxClose = document.getElementById('lightbox-close');
+    <!-- Exploration Images at the bottom -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 border-t border-neutral-100 pt-10">
+      <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
+        <img
+          class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
+          src="../images/herbaltextiles/Exploration%201.jpeg" alt="Herbal Textiles Exploration 1" loading="lazy"
+          decoding="async" />
+      </div>
+      <div class="min-w-0 bg-neutral-100 aspect-[4/5] flex items-center justify-center overflow-hidden">
+        <img
+          class="lightbox-trigger block h-full w-full object-contain cursor-pointer hover:opacity-95 transition-opacity duration-200"
+          src="../images/herbaltextiles/Exploration%202.jpeg" alt="Herbal Textiles Exploration 2" loading="lazy"
+          decoding="async" />
+      </div>
+    </div>
+  </main>
 
-      document.querySelectorAll('.lightbox-trigger').forEach(img => {
-        img.addEventListener('click', () => {
-          lightboxImg.src = img.src;
-          lightboxImg.alt = img.alt;
-          lightbox.classList.remove('hidden');
-          document.body.style.overflow = 'hidden'; // Disable background scrolling
-        });
+  <!-- Lightbox Modal -->
+  <div id="lightbox"
+    class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center backdrop-blur-sm select-none">
+    <button id="lightbox-close"
+      class="absolute right-6 top-6 text-white hover:text-neutral-300 transition-colors focus:outline-none"
+      aria-label="Close lightbox">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+        class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="max-w-[90vw] max-h-[90vh] flex items-center justify-center">
+      <img id="lightbox-img" class="max-w-full max-h-[90vh] object-contain shadow-2xl" src="" alt="Enlarged view" />
+    </div>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.lightbox-trigger').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Disable background scrolling
       });
+    });
 
-      function closeLightbox() {
-        lightbox.classList.add('hidden');
-        lightboxImg.src = '';
-        document.body.style.overflow = ''; // Re-enable scrolling
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightboxImg.src = '';
+      document.body.style.overflow = ''; // Re-enable scrolling
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target.id === 'lightbox') {
+        closeLightbox();
       }
+    });
 
-      lightboxClose.addEventListener('click', closeLightbox);
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.id === 'lightbox') {
-          closeLightbox();
-        }
-      });
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
 
-      // Close on Escape key press
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-          closeLightbox();
-        }
-      });
-    </script>
-  </body>
 </html>
