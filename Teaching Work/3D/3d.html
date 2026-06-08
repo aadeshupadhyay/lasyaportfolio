@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="en">
 
 <head>
@@ -7,6 +7,7 @@
   <title>3D Design & Compositions - Teaching Work</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
@@ -21,11 +22,80 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            background: "#ffffff",
+                colors: {
+            "surface-container-high": "#eae7e7",
+            "on-secondary-container": "#606475",
+            tertiary: "#3e444a",
+            "secondary-fixed-dim": "#c2c6d9",
+            "surface-container-lowest": "#ffffff",
+            secondary: "#5a5e6e",
+            "surface-dim": "#dcd9d9",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#dee3ea",
+            "surface-variant": "#e4e2e1",
+            "surface-container": "#f0eded",
+            background: "#fcf9f8",
+            "surface-container-low": "#f6f3f2",
+            outline: "#747684",
+            "on-primary": "#ffffff",
+            "surface-tint": "#3356c1",
+            "focus-ring-color": "#3356c1",
+            "tertiary-fixed-dim": "#c2c7ce",
+            "on-error-container": "#93000a",
+            "secondary-container": "#dee1f6",
+            "on-secondary-fixed": "#171b29",
+            "surface-bright": "#fcf9f8",
+            "primary-fixed": "#dce1ff",
+            "on-tertiary-fixed-variant": "#42474d",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-tertiary-fixed": "#171c21",
+            "on-secondary": "#ffffff",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#f3f0f0",
+            "outline-variant": "#c4c5d5",
+            "inverse-surface": "#303030",
+            "inverse-primary": "#b6c4ff",
+            "primary-container": "#2e52bd",
+            "on-error": "#ffffff",
+            "tertiary-container": "#565b61",
+            "on-primary-container": "#c6d0ff",
+            surface: "#fcf9f8",
+            "surface-container-highest": "#e4e2e1",
             "on-surface": "#1b1c1c",
-            "body-muted": "#2c3142",
-            "title-accent": "#0738a5",
+            "on-surface-variant": "#444653",
+            primary: "#0738a5",
+            "on-tertiary-container": "#ced3da",
+            "on-primary-fixed": "#00164f",
+            "on-secondary-fixed-variant": "#424656",
+            error: "#ba1a1a",
+            "on-primary-fixed-variant": "#103ca8",
+            "on-background": "#1b1c1c",
+            "secondary-fixed": "#dee1f6",
+          },
+          spacing: {
+            gutter: "2rem",
+            "stack-md": "1.5rem",
+            "margin-x": "5vw",
+            "stack-sm": "0.5rem",
+            "container-max": "1280px",
+            "stack-lg": "4rem",
+            "section-gap": "8rem",
+          },
+          fontFamily: {
+            "headline-lg": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "headline-xl": ["Inter", "sans-serif"],
+          },
+          fontSize: {
+            "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+            "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+            "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+            "label-sm": ["13px", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "600" }],
+            "headline-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "400" }],
           },
           fontFamily: {
             serif: ["Inter", "sans-serif", "Georgia", "serif"],
@@ -37,14 +107,24 @@
   </script>
 </head>
 
-<body class="bg-background text-on-surface antialiased">
-  <a class="fixed left-6 top-6 z-50 flex items-center justify-center w-10 h-10 bg-white/95 rounded-full border border-neutral-200/80 shadow-sm text-neutral-800 hover:text-[#0738a5] hover:bg-white hover:shadow-md transition-all duration-300 group"
-    href="../teaching-work.html" aria-label="Back to Teaching Work">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
-      class="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-0.5">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-    </svg>
-  </a>
+<body class="bg-background text-on-surface antialiased" style="display:flex;flex-direction:column;min-height:100vh;">
+  <!-- TopNavBar -->
+  <header class="bg-surface border-b border-tertiary/20 sticky top-0 w-full z-50" style="background:#fcf9f8;">
+    <div class="flex justify-between items-center w-full px-margin-x max-w-container-max mx-auto h-24" style="max-width:1280px;margin:0 auto;padding:0 5vw;">
+      <a href="../../index.html"
+        class="font-headline-md text-headline-md text-on-surface tracking-tighter hover:text-primary transition-colors duration-200"
+        style="font-size:24px;font-weight:500;color:#1b1c1c;text-decoration:none;">
+        Lasya Aji Silpa
+      </a>
+      <nav class="hidden md:flex gap-8 items-center" style="display:flex;gap:2rem;align-items:center;">
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="../../index.html" style="color:#444653;text-decoration:none;font-size:16px;">Home</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="../../creative-work.html" style="color:#444653;text-decoration:none;font-size:16px;">Creative Work</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="../../scholarly-work.html" style="color:#444653;text-decoration:none;font-size:16px;">Scholarly Work</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="../../Teaching%20Work/teaching-work.html" style="color:#444653;text-decoration:none;font-size:16px;">Teaching</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="../../Awards%20and%20News/awards.html" style="color:#444653;text-decoration:none;font-size:16px;">Awards &amp; News</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Lightbox Modal -->
   <div id="lightbox" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/80 p-4"
@@ -62,7 +142,7 @@
       alt="" />
   </div>
 
-  <main class="mx-auto w-full max-w-6xl px-4 pb-20 pt-28 sm:px-6 md:px-10 md:pb-28 md:pt-36">
+  <main class="mx-auto w-full max-w-6xl px-4 pb-20 pt-8 sm:px-6 md:px-10 md:pb-28 md:pt-8">
     <h1
       class="text-center font-serif text-3xl font-medium tracking-tight text-title-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
       3D Design & Compositions
@@ -75,7 +155,7 @@
 
     <div class="mx-auto mt-12 grid max-w-5xl grid-cols-1 items-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-5">
 
-      <!-- ── GEOMETRY COMPOSITIONS ── -->
+      <!-- â”€â”€ GEOMETRY COMPOSITIONS â”€â”€ -->
 
       <!-- Geometry 1 -->
       <button type="button"
@@ -91,7 +171,7 @@
         <img class="h-full w-full object-contain" src="3D/Geometry%202.png" alt="Geometry 2" loading="lazy" decoding="async" />
       </button>
 
-      <!-- ── WIRE COMPOSITIONS ── -->
+      <!-- â”€â”€ WIRE COMPOSITIONS â”€â”€ -->
 
       <!-- Wire 1 -->
       <button type="button"
@@ -142,7 +222,7 @@
         <img class="h-full w-full object-contain" src="3D/Wire%207.png" alt="Wire 7" loading="lazy" decoding="async" />
       </button>
 
-      <!-- ── CLAY COMPOSITIONS ── -->
+      <!-- â”€â”€ CLAY COMPOSITIONS â”€â”€ -->
 
       <!-- Clay 1 -->
       <button type="button"
@@ -218,6 +298,48 @@
       });
     })();
   </script>
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-tertiary/20 mt-auto" style="background:#fcf9f8;border-top:1px solid rgba(62,68,74,0.2);">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-start w-full px-margin-x py-10 max-w-container-max mx-auto gap-6 text-sm leading-relaxed"
+      style="max-width:1280px;margin:0 auto;padding:2.5rem 5vw;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:start;font-size:13px;color:#444653;">
+      <!-- Left: Contact Info -->
+      <div style="text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;">
+        <p style="font-weight:700;color:#1b1c1c;">Contact Information:</p>
+        <p style="margin-top:4px;">Phone: (828) 262-8337</p>
+        <p>Email: <a href="mailto:silpala@appstate.edu" style="color:#0738a5;text-decoration:underline;">silpala@appstate.edu</a></p>
+      </div>
+      <!-- Center: Socials & Copyright -->
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+        <div style="display:flex;align-items:center;gap:16px;color:#444653;">
+          <a href="https://design.appstate.edu/directory/ms-lasya-aji-silpa" target="_blank" rel="noopener noreferrer" aria-label="Appalachian State University" style="opacity:0.85;transition:opacity 0.2s;">
+            <svg class="w-9 h-9" width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M 8 2 L 16 2 L 16 4 L 14.5 4 L 21.5 19 L 23 19 L 23 22 L 15 22 L 15 19 L 17 19 L 14.5 13 L 9.5 13 L 7 19 L 9 19 L 9 22 L 1 22 L 1 19 L 2.5 19 L 9.5 4 L 8 4 Z M 12 7 L 13.5 11 L 10.5 11 Z" fill="#000000" stroke="#FFC72C" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/lasyasilpa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:#444653;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://scholar.google.com/citations?user=FDt58UcAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" style="color:#444653;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.971 9.5 12 9.5c-2.971 0-5.548 1.75-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/las.silpa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#444653;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.researchgate.net/profile/Lasya-Aji-Silpa" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate" style="color:#444653;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.116 17h-2.106v-10h4.227c2.327 0 3.327 1.22 3.327 2.879 0 1.258-.691 2.211-1.911 2.576l2.122 4.545h-2.278l-1.879-4.22h-1.482v4.22zm0-5.78h1.838c1.13 0 1.638-.508 1.638-1.379 0-.848-.508-1.341-1.638-1.341h-1.838v2.72zm9.121 2.78c-.28.827-.798 1.474-1.554 1.942-.756.468-1.64.702-2.651.702-1.011 0-1.895-.234-2.651-.702-.756-.468-1.274-1.115-1.554-1.942-.28-.827-.42-1.74-.42-2.738 0-.998.14-1.911.42-2.738.28-.827.798-1.474 1.554-1.942.756-.468 1.64-.702 2.651-.702 1.011 0 1.895.234 2.651.702.756.468 1.274 1.115 1.554 1.942.28.827.42 1.74.42 2.738 0 .998-.14 1.911-.42 2.738zm-2.073-4.526c-.198-.445-.486-.667-.866-.667-.38 0-.668.222-.866.667-.198.445-.297.994-.297 1.648 0 .654.099 1.203.297 1.648.198.445.486.667.866.667.38 0 .668-.222.866-.667.198-.445.297-.994.297-1.648 0-.654-.099-1.203-.297-1.648z"/></svg>
+          </a>
+        </div>
+        <div style="text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#1b1c1c;">
+          &copy; Copyright Lasya Aji Silpa
+        </div>
+      </div>
+      <!-- Right: Address -->
+      <div style="text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;">
+        <p style="font-weight:700;color:#1b1c1c;">Address:</p>
+        <p style="margin-top:4px;">Kerr Scott Hall 183</p>
+        <p>397 Rivers St, Boone, NC 28607</p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
+
