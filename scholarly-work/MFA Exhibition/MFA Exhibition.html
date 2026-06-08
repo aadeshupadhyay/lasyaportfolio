@@ -78,28 +78,20 @@
       The Lotus as a Narrative Device: Layering Tradition, Femininity and Technology
     </p>
 
-    <div class="mx-auto mt-12 grid max-w-5xl grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5">
+    <!-- Top row (full width signage) -->
+    <div class="mx-auto mt-12 max-w-5xl">
       <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        class="lightbox-trigger w-full bg-neutral-100 flex items-center justify-center overflow-hidden rounded-sm ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 cursor-pointer"
         data-src="MFA Exhibition Images/1.jpeg" data-alt="MFA exhibition — image 1"
         aria-label="View full size: MFA exhibition image 1">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/1.jpeg" alt="MFA exhibition — image 1"
+        <img class="block w-full h-auto object-cover max-h-[800px]" src="MFA Exhibition Images/1.jpeg" alt="MFA exhibition — image 1"
           loading="lazy" decoding="async" />
       </button>
-      <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/2.jpg" data-alt="MFA exhibition — image 2"
-        aria-label="View full size: MFA exhibition image 2">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/2.jpg" alt="MFA exhibition — image 2"
-          loading="lazy" decoding="async" />
-      </button>
-      <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/3.jpg" data-alt="MFA exhibition — image 3"
-        aria-label="View full size: MFA exhibition image 3">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/3.jpg" alt="MFA exhibition — image 3"
-          loading="lazy" decoding="async" />
-      </button>
+    </div>
+
+    <!-- Adjacent columns grid -->
+    <div class="mx-auto mt-5 grid max-w-5xl grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+      <!-- First Adjacent Pair Row: Image 4 and Image 5 -->
       <button type="button"
         class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
         data-src="MFA Exhibition Images/4.jpg" data-alt="MFA exhibition — image 4"
@@ -114,6 +106,8 @@
         <img class="h-full w-full object-contain" src="MFA Exhibition Images/5.jpg" alt="MFA exhibition — image 5"
           loading="lazy" decoding="async" />
       </button>
+
+      <!-- Second Adjacent Pair Row: Image 6 and Image 7 -->
       <button type="button"
         class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
         data-src="MFA Exhibition Images/6.png" data-alt="MFA exhibition — image 6"
@@ -128,6 +122,15 @@
         <img class="h-full w-full object-contain" src="MFA Exhibition Images/7.png" alt="MFA exhibition — image 7"
           loading="lazy" decoding="async" />
       </button>
+
+      <!-- Third Adjacent Pair Row: Image 3 and Image 8 -->
+      <button type="button"
+        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
+        data-src="MFA Exhibition Images/3.jpg" data-alt="MFA exhibition — image 3"
+        aria-label="View full size: MFA exhibition image 3">
+        <img class="h-full w-full object-contain" src="MFA Exhibition Images/3.jpg" alt="MFA exhibition — image 3"
+          loading="lazy" decoding="async" />
+      </button>
       <button type="button"
         class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
         data-src="MFA Exhibition Images/8.png" data-alt="MFA exhibition — image 8"
@@ -135,6 +138,8 @@
         <img class="h-full w-full object-contain" src="MFA Exhibition Images/8.png" alt="MFA exhibition — image 8"
           loading="lazy" decoding="async" />
       </button>
+
+      <!-- Fourth Adjacent Pair Row: Image 9 and Image 11 -->
       <button type="button"
         class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
         data-src="MFA Exhibition Images/9.png" data-alt="MFA exhibition — image 9"
@@ -144,32 +149,13 @@
       </button>
       <button type="button"
         class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/10.png" data-alt="MFA exhibition — image 10"
-        aria-label="View full size: MFA exhibition image 10">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/10.png" alt="MFA exhibition — image 10"
-          loading="lazy" decoding="async" />
-      </button>
-      <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
         data-src="MFA Exhibition Images/11.png" data-alt="MFA exhibition — image 11"
         aria-label="View full size: MFA exhibition image 11">
         <img class="h-full w-full object-contain" src="MFA Exhibition Images/11.png" alt="MFA exhibition — image 11"
           loading="lazy" decoding="async" />
       </button>
-      <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/12.jpg" data-alt="MFA exhibition — image 12"
-        aria-label="View full size: MFA exhibition image 12">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/12.jpg" alt="MFA exhibition — image 12"
-          loading="lazy" decoding="async" />
-      </button>
-      <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/13.jpg" data-alt="MFA exhibition — image 13"
-        aria-label="View full size: MFA exhibition image 13">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/13.jpg" alt="MFA exhibition — image 13"
-          loading="lazy" decoding="async" />
-      </button>
+
+      <!-- Fifth Adjacent Pair Row: Image 14 and Image 10 -->
       <button type="button"
         class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
         data-src="MFA Exhibition Images/14.jpg" data-alt="MFA exhibition — image 14"
@@ -179,23 +165,20 @@
       </button>
       <button type="button"
         class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/15.jpg" data-alt="MFA exhibition — image 15"
-        aria-label="View full size: MFA exhibition image 15">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/15.jpg" alt="MFA exhibition — image 15"
+        data-src="MFA Exhibition Images/10.png" data-alt="MFA exhibition — image 10"
+        aria-label="View full size: MFA exhibition image 10">
+        <img class="h-full w-full object-contain" src="MFA Exhibition Images/10.png" alt="MFA exhibition — image 10"
           loading="lazy" decoding="async" />
       </button>
+    </div>
+
+    <!-- Bottom row (full width Image 12) -->
+    <div class="mx-auto mt-5 max-w-5xl">
       <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/16.jpg" data-alt="MFA exhibition — image 16"
-        aria-label="View full size: MFA exhibition image 16">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/16.jpg" alt="MFA exhibition — image 16"
-          loading="lazy" decoding="async" />
-      </button>
-      <button type="button"
-        class="lightbox-trigger min-w-0 cursor-zoom-in overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 aspect-[4/5] flex items-center justify-center"
-        data-src="MFA Exhibition Images/17.jpg" data-alt="MFA exhibition — image 17"
-        aria-label="View full size: MFA exhibition image 17">
-        <img class="h-full w-full object-contain" src="MFA Exhibition Images/17.jpg" alt="MFA exhibition — image 17"
+        class="lightbox-trigger w-full bg-neutral-100 flex items-center justify-center overflow-hidden rounded-sm ring-1 ring-neutral-200/90 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-surface/35 cursor-pointer"
+        data-src="MFA Exhibition Images/12.jpg" data-alt="MFA exhibition — image 12"
+        aria-label="View full size: MFA exhibition image 12">
+        <img class="block w-full h-auto object-cover max-h-[800px]" src="MFA Exhibition Images/12.jpg" alt="MFA exhibition — image 12"
           loading="lazy" decoding="async" />
       </button>
     </div>
